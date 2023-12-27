@@ -4,7 +4,12 @@ body {
     overflow-y: scroll;
 }
 
+#wrapper{
+    height: unset;
+}
+
 header {
+    position: relative;
     background: white;
     max-width: unset;
 }
@@ -24,7 +29,7 @@ section{
     text-align: center;
     height: 180px;
     padding: 60px 0;
-    max-width: 960px;
+    /*max-width: 960px;*/
 }
 
 .productNav ul {
@@ -40,8 +45,8 @@ section{
     line-height: 60px;
 }
 
-.productNav ul li:hover a {
-    color: #2e81f8;
+.productNav ul li:hover a, .navActive{
+    color: #2e81f8 !important;
 }
 
 .productNav ul li a {
@@ -54,6 +59,7 @@ h3 {
     text-align: center;
     font-weight: bolder;
 }
+
 
 /*dropdown*/
 .selectDropdown {
@@ -119,9 +125,10 @@ h3 {
 
 /* --------------------카드 섹션------------------------- */
 .cardSection{
+    margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .cardSection .cardSection-item-list{
@@ -182,6 +189,50 @@ h3 {
         justify-content: space-between;
     }
     .cardSection .cardSection-item-list{
-        width: 49%;
+        width: 100%;
+    }
+
+    .cardSection .cardSection-item-list img {
+        margin-bottom: 10px;
+    }
+}
+
+/*2) mobile 환경 | 디바이스 장치가 최소 767px일 때*/
+@media screen and (max-width: 767px) {
+    /*nav*/
+    header{
+        position: sticky;
+    }
+
+    section, .selectDropdown{
+        margin-top: 40px;
+    }
+
+    .mobileBr{
+        display: unset;
+    }
+
+    nav.productNav{
+        display: unset !important;
+        position: relative;
+        height: 100%;
+    }
+
+    section div:nth-of-type(1) h3{
+        display: none;
+    }
+
+    .productNav ul li a{
+        font-size: 13px;
+    }
+
+    .cardSection .cardSection-item-list {
+        width: 100%;
+        height: 181px;
+    }
+
+    .cardSection .cardSection-item-list ul {
+        height: 90px;
+        gap: unset;
     }
 }

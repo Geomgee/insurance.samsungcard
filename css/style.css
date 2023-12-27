@@ -511,16 +511,15 @@ hr.c-g {
 /*2) laptop 환경 | 디바이스 장치가 최대 1199px일 때 1199px under*/
 @media screen and (max-width: 1199px) {
     .event ul li a strong {
+        display: -webkit-box;
         width: 100%;
         height: 40px;
-        font-size: 16px;
         overflow: hidden;
-        /*말줄임*/
-        display: -webkit-box;
         text-overflow: ellipsis;
         word-wrap: break-word;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        font-size: 16px;
     }
 }
 
