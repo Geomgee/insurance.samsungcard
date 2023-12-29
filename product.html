@@ -7,8 +7,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="//static12.samsungcard.com/images/insurance/favicon.ico">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!--css file link-->
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/product.css"/>
@@ -481,6 +480,26 @@
                 </ul>
             </div>
         </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center m-4">
+                        모바일 환경에서만 가입 가능한 보험 상품입니다.
+                    </div>
+                    <div class="modal-footer p-0 m-0 mb-3">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- footer -->
     <footer>
@@ -608,30 +627,30 @@
                     <li>
                         <img src="img/img-awards03.png" alt="">
                         <div>
-                        <span>
-                            국가고객 만족도
-                        </span>
                             <span>
-                        10년 연속 1위
-                        </span>
+                                국가고객 만족도
+                            </span>
+                            <span>
+                                10년 연속 1위
+                            </span>
                         </div>
                     </li>
                     <li>
                         <img src="img/img-awards04.png" alt="">
                         <div>
-                        <span>
-                            한국서비스대상
-                        </span>
                             <span>
-                        명예의 전당
-                        </span>
+                                한국서비스대상
+                            </span>
+                            <span>
+                            명예의 전당
+                            </span>
                         </div>
                     </li>
                     <li>
                         <img src="img/img-awards05.png" alt="">
                         <span>
-                    고객만족경영대상
-                    </span>
+                            고객만족경영대상
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -746,6 +765,11 @@
             }, 200)
             return false;
         });
+
+        /*modal*/
+        cardSection.click(function(){
+            $('#myModal').modal('show')
+        })
 
     })
 </script>
