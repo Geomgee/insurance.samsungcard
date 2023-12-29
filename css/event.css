@@ -42,19 +42,3 @@ section{
 .eventBox ul li{
     width: 100%;
 }
-
-/*********************************************/
-/*                  미디어쿼리                 */
-/*********************************************/
-/*1) window tab size : 1274 | <wrapper white section 80% under>*/
-@media screen and (max-width: 1274px) {
-    .eventBoxParent{
-
-    }
-    .eventBox{
-        width: 100%;
-        display: flex;
-        flex-difection: row;
-    }
-
-}
