@@ -105,12 +105,16 @@ header {
 }
 
 /*--------------nav-------------*/
-#logo {
+#logo, .logo {
     float: left;
     width: 280px;
     height: 22px;
     background: url("../img/img-header-logo.png") no-repeat center/contain;
     z-index: 3;
+}
+
+.logo{
+    width: 180px;
 }
 
 .headerBot {
@@ -145,7 +149,7 @@ nav a {
 nav ul {
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    /*width: 40%;*/
     float: left;
     font-size: 1.2em;
 }
@@ -182,7 +186,6 @@ nav ul {
     background-position: -60px 0;
 }
 
-
 /*nav-menu*/
 .nav-menu ul {
     padding: 8px;
@@ -206,7 +209,6 @@ nav ul {
     /*top: 137px;*/
     /*margin-left: -25px;*/
 }
-
 
 .nav-menu .menu-top {
     font-size: 19px;
@@ -282,12 +284,76 @@ nav ul {
 }
 
 /*mobile nav*/
+.mobileNav{
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    top: 0;
+    right: 0;
+}
+
+.mobileNav>div, .mobileNavList, .mobileNavList>div{
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.mobileNav .mobileNavList{
+    margin-top: 50px;
+}
+
+.mobileNavList ul{
+    flex-direction: column;
+    width: 100%;
+}
+
+.mobileNavList ul:nth-of-type(1){
+    margin-top: 50px;
+}
+
+
+.mobileNavList ul li{
+    /*border: 1px solid aqua;*/
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.mobileNav .menu-top{
+    display: block;
+    float: left;
+}
+
+.mobileNavList ul li a{
+    color: #686868;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.mobileNavList .menu-top::after {
+    bottom: -5px;
+    left: 0;
+}
+
+.mobileNavList .arrow-down{
+    margin-top: -25px;
+    margin-right: 25px;
+}
+
+
+/*토글 버튼 (숨기기)*/
+.mobileNavList ul li, .mobileNavList .menu-top::after{
+    /*display: none;*/
+}
+
+/*icon*/
 .hamburger{
     display: none;
     position: absolute;
     top: 15px;
     right: 20px;
 }
+
 
 
 /************/
@@ -305,7 +371,7 @@ nav ul {
     margin-left: 270px;
 }
 
-.nav-search .btn-close {
+.btn-close {
     z-index: 999;
     opacity: 1;
 }
@@ -771,7 +837,7 @@ footer .tel li span {
         height: 50px;
     }
 
-    nav, div.shadowWrap{
+    nav:not(.mobileNav), div.shadowWrap{
         display: none;
     }
 
