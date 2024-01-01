@@ -5,6 +5,7 @@ section{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    padding: 0 20px;
 }
 
 .txtBox{
@@ -14,6 +15,7 @@ section{
     text-align: center;
     height: 157px;
 }
+
 
 /* section */
 .eventBoxParent{
@@ -41,4 +43,33 @@ section{
 
 .eventBox ul li{
     width: 100%;
+}
+
+/*********************************************/
+/*                  미디어쿼리                 */
+/*********************************************/
+/*1) window tab size : 1274 | <wrapper white section 80% under>*/
+@media screen and (max-width: 1274px) {
+    .eventBox{
+        border: none;
+        width: 100%;
+        display: flex;
+        border-radius: 5px;
+        padding: unset;
+    }
+
+    .eventBox ul li div:first-child{
+        width: 38%;
+    }
+
+    .eventBox ul{
+        width: 100%;
+    }
+
+    .eventBox img{
+        border-radius: 5px 0 0 5px;
+        height: 100%;
+        width: 100%;
+    }
+
 }

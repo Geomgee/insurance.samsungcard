@@ -70,16 +70,22 @@
                 </ul>
             </div>
         </nav>
-        <!-- Mobile nav -->
-        <div class="mobileNav">
+    </header>
+    <!--mobile nav-->
+    <nav class="mobileNav">
+        <div>
             <button type="button" class="btn-menu hamburger"></button>
+            <!--M nav 클릭 전 숨겨질 영역-->
             <div class="mobileNavList">
                 <div>
                     <h2 class="logo"><a href="index.html"></a></h2>
                     <button type="button" class="btn-close"></button>
                 </div>
-                <ul class="mt-5">
-                    <li class="menu-top">카테고리</li>
+                <ul>
+                    <li class="menu-top">
+                        <span>카테고리</span>
+                        <div class="arrow-down"></div>
+                    </li>
                     <li class="show1"><a href="#">자동차</a></li>
                     <li class="show2"><a href="#">기타</a></li>
                     <li class="show3"><a href="#">암·건강</a></li>
@@ -87,20 +93,26 @@
                     <li class="show5"><a href="#">여행·레저</a></li>
                 </ul>
                 <ul>
-                    <li class="menu-top">상품 모아보기</li>
+                    <li class="menu-top">
+                        상품 모아보기
+                        <div class="arrow-down"></div>
+                    </li>
                     <li><a href="#">인기순위</a></li>
                     <li><a href="#">신규상품</a></li>
                     <li><a href="#">보험사별</a></li>
                     <li><a href="#">전체보기</a></li>
                 </ul>
                 <ul>
-                    <li class="menu-top">혜택</li>
+                    <li class="menu-top">혜택
+                        <div class="arrow-down"></div>
+                    </li>
                     <li><a href="#">이벤트</a></li>
                     <li><a href="#">보험상담</a></li>
                 </ul>
             </div>
+
         </div>
-    </header>
+    </nav>
     <section>
         <nav class="productNav">
             <ul>
@@ -702,11 +714,12 @@
         let driver = $(".driver");
         let etc = $(".etc");
         let ProductNavList1 = $(".show1");
-        let ProductNavList2 = $(".show5");
-        let ProductNavList3 = $(".show2");
+        let ProductNavList2 = $(".show2");
+        let ProductNavList3 = $(".show3");
         let ProductNavList4 = $(".show4");
-        let ProductNavList5 = $(".show3");
+        let ProductNavList5 = $(".show5");
         let ProductNavList = $(".productNav ul li");
+        let ProductNavListA = $(".productNav ul li a");
         let navMenu = $(".nav-menu ul li");
         let i = $(this).index();
 
@@ -766,10 +779,6 @@
             alert("ProductNavListA");
         })
 
-
-        /* ----------- nav ----------- */
-
-
         /*withNeedINmobileBtn*/
         let withNeedINmobileBtn = $(".withNeedINmobileBtn");
         let withNeedINmobileArrow = $(".arrow-down");
@@ -781,7 +790,6 @@
             withNeedINmobileList.toggle();
             withNeedINmobileArrow.toggleClass("arrow-active");
         });
-
 
         /* up btn */
         let upBtn = $(".width #upBtn");
