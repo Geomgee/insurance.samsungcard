@@ -105,7 +105,7 @@ header {
 }
 
 /*--------------nav-------------*/
-#logo {
+#logo, .logo {
     float: left;
     width: 280px;
     height: 22px;
@@ -398,6 +398,51 @@ input:hover::-webkit-search-results-decoration {
     color: white;
 }
 
+/* mobile nav */
+.mobileNav{
+    width: 280px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    z-index: 3;
+}
+
+.mobileNavList{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 25px;
+    padding: 25px;
+    left: 0;
+}
+
+.mobileNav .logo{
+    width: 180px;
+}
+
+.hamburger{
+    /*right: 20px;*/
+}
+
+.mobileNavList ul li:first-child{
+    clear: both;
+}
+
+.mobileNavList ul li{
+    padding: 8px;
+}
+
+.mobileNavList .menu-top::after{
+    top: 6px;
+}
+
+
+.mobileNavList ul li a{
+    color: #666666;
+    margin-left: 10px;
+}
 
 /*-------------------------------------*/
 /*               footer                */
@@ -859,10 +904,12 @@ footer .tel li span {
     .award ul{
         padding-top: 66px;
     }
+    
     .award img{
         width: 36px;
         height: 36px;
     }
+    
     .award ul li span {
         line-height: 25px;
     }
