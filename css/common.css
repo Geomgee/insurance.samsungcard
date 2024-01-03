@@ -43,7 +43,7 @@ a, button, a:hover {
 
 #wrapper {
     font-family: 'SpoqaHanSansNeo-Regular', serif;
-    min-width: 637px;
+    /*min-width: 637px;*/
     width: 100%;
     height: 500%;
     margin: 0 auto;
@@ -102,6 +102,10 @@ header {
 .img-h24 {
     height: 24px;
     float: left;
+}
+
+.c-grey{
+    color: #575b63;
 }
 
 /*--------------nav-------------*/
